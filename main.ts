@@ -41,7 +41,7 @@ case 1:D[s++]=(p[k-1]<<24)>>24;break;
 case 2:D[s++]=p[k-4]|(p[k-3]<<8)|(p[k-2]<<16)|(p[k-1]<<24);break;
 case 3:s--;break;
 case 4:D[s]=D[s-1];s++;break;
-case 5:{const z=D[s-1];D[s-1]=D[s-2];D[s-2]=z;break;}
+case 5:[D[s-1],D[s-2]]=[D[s-2],D[s-1]];break;
 case 6:D[s]=D[s-2];s++;break;
 case 7:{const z=D[s-3];D[s-3]=D[s-2];D[s-2]=D[s-1];D[s-1]=z;break;}
 case 23:D[s-1]=-D[s-1]|0;break;
